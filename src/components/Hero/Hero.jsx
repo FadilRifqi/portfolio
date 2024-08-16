@@ -1,88 +1,51 @@
-import { useState } from "react";
+import { useScroll, useTransform, motion } from "framer-motion";
 import heroImg from "../../assets/hero-img.png";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 
-const NavbarMobile = () => {
-  const [isOpen, setIsOpen] = useState(false);
+const Hero = () => {
+  // Get the scroll position
+  const { scrollY } = useScroll();
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
+  // Create parallax effect for the image and text
+  const imageX = useTransform(scrollY, [200, 500], [0, -700]);
+  const textX = useTransform(scrollY, [200, 500], [0, 800]);
+  const moveY = useTransform(scrollY, [0, 500], [0, 500]); // Moves both image and text down
+  const opacity = useTransform(scrollY, [0, 500], [1, 0]); // Changes opacity from 1 to 0
 
   return (
-    <nav className="sticky top-0 w-full bg-white border-gray-200 dark:bg-gray-900 z-50">
-      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <a
-          href="https://flowbite.com/"
-          className="flex items-center space-x-3 rtl:space-x-reverse"
-        >
-          <img src={heroImg} className="h-8" alt="Flowbite Logo" />
-        </a>
-        <button
-          onClick={toggleMenu}
-          type="button"
-          className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-          aria-controls="navbar-default"
-          aria-expanded={isOpen}
-        >
-          <span className="sr-only">Open main menu</span>
-          <FontAwesomeIcon
-            icon={isOpen ? faTimes : faBars}
-            className="w-5 h-5"
-          />
-        </button>
-        <div
-          className={`${isOpen ? "block" : "hidden"} w-full md:block md:w-auto`}
-          id="navbar-default"
-        >
-          <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-            <li>
-              <a
-                href="#"
-                className="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500"
-                aria-current="page"
-              >
-                Home
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-              >
-                About
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-              >
-                Services
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-              >
-                Pricing
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-              >
-                Contact
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+    <section
+      id="about"
+      className="min-h-screen flex flex-col md:flex-row items-center justify-center bg-gray-100 dark:bg-gray-800 py-12"
+    >
+      <motion.div
+        className="w-full md:w-1/2 flex justify-center mb-6 md:mb-0"
+        style={{ x: imageX, y: moveY, opacity }}
+        initial={{ opacity: 0, x: -100 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 1 }}
+      >
+        <img src={heroImg} alt="Hero" className="w-3/4 rounded-lg" />
+      </motion.div>
+      <motion.div
+        className="w-full md:w-1/2 text-center md:text-left px-4"
+        style={{ x: textX, y: moveY, opacity }}
+        initial={{ opacity: 0, x: 100 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 1 }}
+      >
+        <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+          About Myself
+        </h1>
+        <p className="text-lg text-gray-700 dark:text-gray-300">
+          I am a 5th-semester Informatics Engineering student with a strong
+          passion for web development. I enjoy creating innovative and
+          responsive websites, utilizing modern technologies and best practices
+          to deliver clean and efficient code. As I continue to expand my skills
+          and knowledge in the field, I am eager to take on new challenges and
+          contribute to impactful web projects.
+        </p>
+      </motion.div>
+    </section>
   );
 };
 
-export default NavbarMobile;
+export default Hero;

@@ -62,7 +62,7 @@ const Navbar = () => {
       transition={{
         y: { duration: 0.5, ease: "easeOut" },
       }}
-      className={`bg-white dark:bg-gray-900 border-gray-200 sticky top-0 z-20 ${
+      className={`bg-white md:block hidden dark:bg-gray-900 border-gray-200 sticky top-0 z-20 ${
         isScrolled ? "top-4 mx-4 rounded" : ""
       }`}
     >
