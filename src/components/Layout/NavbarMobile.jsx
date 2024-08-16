@@ -43,7 +43,7 @@ const NavbarMobile = () => {
       transition={{
         y: { duration: 0.5, ease: "easeOut" },
       }}
-      className="bg-white dark:bg-gray-900 border-gray-200 sticky top-0 w-full z-20"
+      className="md:hidden bg-white dark:bg-gray-900 border-gray-200 sticky top-0 w-full z-20"
     >
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="#" className="flex items-center space-x-3 rtl:space-x-reverse">
