@@ -6,7 +6,7 @@ export const projects = [
     description:
       "Buye is an e-commerce platform that allows users to buy and sell products.",
     image: buyee, // Replace with actual image path
-    link: "https://belajar-django-frontend.vercel.app/",
+    link: "https://belajar-django.vercel.app/",
   },
   //   ,
   //   {
