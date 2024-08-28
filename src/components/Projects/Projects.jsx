@@ -57,7 +57,7 @@ const Projects = () => {
             <img
               src={project.image}
               alt={project.title}
-              className="w-full h-48 object-cover rounded-t-lg mb-4"
+              className="w-full h-80 object-content rounded-t-lg mb-4"
             />
             <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
               {project.title}
