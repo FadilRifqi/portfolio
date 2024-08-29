@@ -1,5 +1,6 @@
 import buyee from "../assets/buyee.png";
 import quotesGenerator from "../assets/quotesGenerator.png";
+import quiz from "../assets/quiz.png";
 
 export const projects = [
   {
@@ -16,10 +17,11 @@ export const projects = [
     image: quotesGenerator, // Replace with actual image path
     link: "https://quotes-generator-phi.vercel.app/",
   },
-  //   {
-  //     title: "Project Three",
-  //     description: "This is a brief description of Project Three.",
-  //     image: "path/to/image3.jpg", // Replace with actual image path
-  //     link: "#",
-  //   },
+  {
+    title: "Quiz Web App",
+    description:
+      "Quiz Web App is a web application that allows users to take quizzes.",
+    image: quiz, // Replace with actual image path
+    link: "https://quiz-fadil.vercel.app/",
+  },
 ];
