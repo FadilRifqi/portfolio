@@ -1,4 +1,5 @@
 import buyee from "../assets/buyee.png";
+import quotesGenerator from "../assets/quotesGenerator.png";
 
 export const projects = [
   {
@@ -6,15 +7,15 @@ export const projects = [
     description:
       "Buye is an e-commerce platform that allows users to buy and sell products.",
     image: buyee, // Replace with actual image path
-    link: "https://belajar-django.vercel.app/",
+    link: "https://belajar-django.vercel.app/       ",
   },
-  //   ,
-  //   {
-  //     title: "Project Two",
-  //     description: "This is a brief description of Project Two.",
-  //     image: "path/to/image2.jpg", // Replace with actual image path
-  //     link: "#",
-  //   },
+  {
+    title: "Quotes Generator",
+    description:
+      "Quotes Generator is a web application that generates random quotes.",
+    image: quotesGenerator, // Replace with actual image path
+    link: "https://quotes-generator-phi.vercel.app/",
+  },
   //   {
   //     title: "Project Three",
   //     description: "This is a brief description of Project Three.",
