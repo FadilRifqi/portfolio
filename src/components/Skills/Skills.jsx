@@ -17,13 +17,10 @@ const Skills = () => {
   const yTransform = useTransform(scrollY, [0, 500], ["0%", "50%"]);
 
   return (
-    <motion.section
+    <section
       ref={ref}
       id="skills"
       className="min-h-screen flex flex-col items-center justify-center bg-gray-100 dark:bg-gray-800 py-12"
-      initial={{ opacity: 0, y: 50 }}
-      animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-      transition={{ duration: 0.5 }}
     >
       <motion.h2
         className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-8 text-center"
@@ -78,7 +75,7 @@ const Skills = () => {
           </motion.li>
         ))}
       </motion.ul>
-    </motion.section>
+    </section>
   );
 };
 

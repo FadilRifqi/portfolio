@@ -21,7 +21,7 @@ const Hero = () => {
         style={{ x: imageX, y: moveY, opacity }}
         initial={{ opacity: 0, x: -100 }}
         animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 1 }}
+        transition={{ duration: 1.2, ease: "easeOut" }}
       >
         <img src={heroImg} alt="Hero" className="w-3/4 rounded-lg" />
       </motion.div>
@@ -30,7 +30,7 @@ const Hero = () => {
         style={{ x: textX, y: moveY, opacity }}
         initial={{ opacity: 0, x: 100 }}
         animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 1 }}
+        transition={{ duration: 1.2, ease: "easeOut", delay: 0.2 }}
       >
         <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
           About Myself

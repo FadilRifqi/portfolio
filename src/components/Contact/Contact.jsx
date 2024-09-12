@@ -9,33 +9,31 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 const Contact = () => {
-  // Use Intersection Observer to track if the section is in view
   const { ref, inView } = useInView({
     triggerOnce: false,
     threshold: 0.3,
   });
 
-  // Use Scroll to apply parallax effect
   const { scrollY } = useScroll();
   const yTransform = useTransform(scrollY, [0, 300], [100, -100]);
 
   return (
-    <motion.section
+    <section
       ref={ref}
       id="contact"
       className="bg-gray-100 dark:bg-gray-800 py-8 min-h-screen flex flex-col items-center justify-center"
-      initial={{ opacity: 0, y: 50 }}
-      animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-      transition={{ duration: 0.5 }}
     >
       <motion.div
         className="max-w-screen-xl mx-auto p-4 text-center"
         style={{ y: yTransform }}
+        initial={{ opacity: 0, y: 30 }}
+        animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
       >
         <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">
           Contact
         </h2>
-        <div className="flex justify-center flex-wrap gap-6">
+        <div className="flex justify-center flex-wrap gap-6 mb-8">
           <a
             href="https://www.instagram.com/ataullahrifqi/"
             target="_blank"
@@ -70,7 +68,7 @@ const Contact = () => {
           </a>
         </div>
       </motion.div>
-    </motion.section>
+    </section>
   );
 };
 
