@@ -1,6 +1,7 @@
 import buyee from "../assets/buyee.png";
 import quotesGenerator from "../assets/quotesGenerator.png";
 import quiz from "../assets/quiz.png";
+import websiteStatic from "../assets/websiteStatic.png";
 
 export const projects = [
   {
@@ -23,5 +24,11 @@ export const projects = [
       "Quiz Web App is a web application that allows users to take quizzes.",
     image: quiz, // Replace with actual image path
     link: "https://quiz-fadil.vercel.app/",
+  },
+  {
+    title: "Static Desktop Website",
+    description: "A clone static website from https://bernerkuhl.com.",
+    image: websiteStatic, // Replace with actual image path
+    link: "https://dicoding-dbsf.vercel.app/",
   },
 ];
