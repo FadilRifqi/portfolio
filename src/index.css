@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-  scroll-behavior: smooth;
+:root {
+  --font-head: 'Archivo Black', sans-serif;
+  --font-sans: 'Share Tech', sans-serif;
 }

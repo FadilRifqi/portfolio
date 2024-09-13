@@ -1,34 +1,35 @@
-import buyee from "../assets/buyee.png";
-import quotesGenerator from "../assets/quotesGenerator.png";
-import quiz from "../assets/quiz.png";
-import websiteStatic from "../assets/websiteStatic.png";
+import buyee from '../assets/buyee.png';
+import quotesGenerator from '../assets/quotesGenerator.png';
+import quiz from '../assets/quiz.png';
+import websiteStatic from '../assets/websiteStatic.png';
 
 export const projects = [
   {
-    title: "Buyee",
+    title: 'Buyee',
     description:
-      "Buye is an e-commerce platform that allows users to buy and sell products.",
+      'Buye is an e-commerce platform that allows users to buy and sell products. with stack django and reactjs.',
     image: buyee, // Replace with actual image path
-    link: "https://belajar-django.vercel.app/       ",
+    link: 'https://belajar-django.vercel.app/       ',
   },
   {
-    title: "Quotes Generator",
+    title: 'Quotes Generator',
     description:
-      "Quotes Generator is a web application that generates random quotes.",
+      'Quotes Generator is a web application that generates random quotes with stack reactjs.',
     image: quotesGenerator, // Replace with actual image path
-    link: "https://quotes-generator-phi.vercel.app/",
+    link: 'https://quotes-generator-phi.vercel.app/',
   },
   {
-    title: "Quiz Web App",
+    title: 'Quiz Web App',
     description:
-      "Quiz Web App is a web application that allows users to take quizzes.",
+      'Quiz Web App is a web application that allows users to take quizzes with stack reactjs.',
     image: quiz, // Replace with actual image path
-    link: "https://quiz-fadil.vercel.app/",
+    link: 'https://quiz-fadil.vercel.app/',
   },
   {
-    title: "Static Desktop Website",
-    description: "A clone static website from https://bernerkuhl.com.",
+    title: 'Static Desktop Website',
+    description:
+      'A clone static website from https://bernerkuhl.com with oinly html, css, and javascript.',
     image: websiteStatic, // Replace with actual image path
-    link: "https://dicoding-dbsf.vercel.app/",
+    link: 'https://dicoding-dbsf.vercel.app/',
   },
 ];
