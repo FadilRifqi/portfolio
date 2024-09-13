@@ -4,7 +4,7 @@ import { OrbitControls, useGLTF } from '@react-three/drei';
 import * as THREE from 'three'; // Import THREE for vector calculations
 
 const AvatarModel = () => {
-  const { scene } = useGLTF('/avatar.glb', true); // Replace with the correct path
+  const { scene } = useGLTF('/preview.glb', true); // Replace with the correct path
   const [mousePosition, setMousePosition] = useState(new THREE.Vector2());
 
   useEffect(() => {
@@ -19,6 +19,19 @@ const AvatarModel = () => {
       window.removeEventListener('mousemove', handleMouseMove);
     };
   }, []);
+
+  useEffect(() => {
+    if (scene) {
+      // Create an ambient light once
+      const light = new THREE.AmbientLight(0xffffff, 2); // Adjust intensity as needed
+      scene.add(light);
+
+      // Clean up the light when the component is unmounted or scene changes
+      return () => {
+        scene.remove(light);
+      };
+    }
+  }, [scene]);
 
   useFrame((state) => {
     if (scene) {
@@ -41,7 +54,7 @@ const AvatarModel = () => {
   });
 
   // Position the model at the center
-  return <primitive object={scene} scale={2} position={[0, -1.5, 0]} />;
+  return <primitive object={scene} scale={2} position={[0, 0, 0]} />;
 };
 
 const Avatar3D = () => {
@@ -54,10 +67,10 @@ const Avatar3D = () => {
     const updateCameraSettings = () => {
       if (window.innerWidth < 768) {
         // Small screens
-        setCameraSettings({ position: [0, 2, 5], fov: 80 });
+        setCameraSettings({ position: [0, 0, 5], fov: 80 });
       } else {
         // Medium and larger screens
-        setCameraSettings({ position: [-0.5, 2, 5], fov: 80 });
+        setCameraSettings({ position: [-0.5, 0, 5], fov: 80 });
       }
     };
 
