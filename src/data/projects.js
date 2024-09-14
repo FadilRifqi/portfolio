@@ -10,7 +10,7 @@ export const projects = [
       'Buye is an e-commerce platform that allows users to buy and sell products. with stack django and reactjs.',
     image: buyee, // Replace with actual image path
     link: 'https://belajar-django.vercel.app/',
-    githubLink: 'https://github.com/FadilRifqi/jadwal-kelas-frontend',
+    githubLink: 'https://github.com/FadilRifqi/belajar-django',
   },
   {
     title: 'Quotes Generator',
