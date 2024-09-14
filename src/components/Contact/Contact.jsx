@@ -17,7 +17,7 @@ const Contact = () => {
         className="max-w-screen-xl mx-auto p-4 text-center"
         initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }} // This replaces useInView
-        viewport={{ once: false, amount: 0.5 }} // Triggers animation when 30% is in view
+        viewport={{ once: true, amount: 0.5 }} // Triggers animation when 30% is in view
         transition={{ duration: 0.8, ease: 'easeOut' }}
       >
         <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">
