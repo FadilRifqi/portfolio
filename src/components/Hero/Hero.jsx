@@ -15,18 +15,14 @@ const Hero = () => {
         <div className="flex justify-center md:w-1/2  items-center w-full md:h-screen">
           <div className="w-full text-center md:text-left px-4">
             <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-              About Myself
+              Hi! I&apos;m{' '}
+              <span className="text-blue-500 dark:text-blue-300">Fadil</span>
             </h1>
             <p className="text-lg text-gray-700 dark:text-gray-300">
-              Hi! My name is Muhammad Fadil Ataullah Rifqi. I&apos;m a
-              5th-semester Informatics Engineering student with a strong passion
-              for full-stack web development. I enjoy creating innovative and
-              responsive websites, utilizing modern technologies and best
-              practices to deliver clean and efficient code across both
-              front-end and back-end systems. As I continue to expand my skills
-              and knowledge in full-stack development, I am eager to take on new
-              challenges and contribute to impactful web projects that leverage
-              the entire web technology stack.
+              I am a 5th-semester student at Institut Teknologi Sumatera,
+              currently learning web development. I am passionate about creating
+              innovative and responsive websites using modern technologies. I am
+              eager to expand my skills and take on new challenges in the field.
             </p>
           </div>
         </div>

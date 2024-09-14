@@ -16,20 +16,20 @@ export const projects = [
     description:
       'Quotes Generator is a web application that generates random quotes with stack reactjs.',
     image: quotesGenerator, // Replace with actual image path
-    link: 'https://quotes-generator-phi.vercel.app/',
+    link: 'https://quotes.fadilrifqi.site/',
   },
   {
     title: 'Quiz Web App',
     description:
       'Quiz Web App is a web application that allows users to take quizzes with stack reactjs.',
     image: quiz, // Replace with actual image path
-    link: 'https://quiz-fadil.vercel.app/',
+    link: 'https://quizfadilrifqi.site/',
   },
   {
     title: 'Static Desktop Website',
     description:
       'A clone static website from https://bernerkuhl.com with oinly html, css, and javascript.',
     image: websiteStatic, // Replace with actual image path
-    link: 'https://dicoding-dbsf.vercel.app/',
+    link: 'https://static.fadilrifqi.site/',
   },
 ];
