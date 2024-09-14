@@ -31,7 +31,7 @@ const Projects = () => {
           initial={{ opacity: 0, y: -50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          viewport={{ once: false, amount: 0.3 }} // Animation triggered when 30% is in view
+          viewport={{ once: true, amount: 0.3 }} // Animation triggered when 30% is in view
         >
           My Projects
         </motion.h2>
@@ -49,7 +49,7 @@ const Projects = () => {
                 y: 0,
                 transition: { duration: 0.5, delay: (index % 3) * 0.2 },
               }} // Animate when in view
-              viewport={{ once: false, amount: 0.2 }} // 30% of element triggers animation
+              viewport={{ once: true, amount: 0.2 }} // 30% of element triggers animation
               whileHover={{
                 scale: 1.05,
                 cursor: 'pointer',
