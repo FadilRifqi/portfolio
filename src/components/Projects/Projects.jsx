@@ -2,6 +2,9 @@ import { useState } from 'react';
 import { projects } from '../../data/projects';
 import { motion } from 'framer-motion';
 import Preview from './Preview';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faDesktop } from '@fortawesome/free-solid-svg-icons';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 const Projects = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -28,7 +31,7 @@ const Projects = () => {
           initial={{ opacity: 0, y: -50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          viewport={{ once: true, amount: 0.3 }} // Animation triggered when 30% is in view
+          viewport={{ once: false, amount: 0.3 }} // Animation triggered when 30% is in view
         >
           My Projects
         </motion.h2>
@@ -46,7 +49,7 @@ const Projects = () => {
                 y: 0,
                 transition: { duration: 0.5, delay: (index % 3) * 0.2 },
               }} // Animate when in view
-              viewport={{ once: true, amount: 0.2 }} // 30% of element triggers animation
+              viewport={{ once: false, amount: 0.2 }} // 30% of element triggers animation
               whileHover={{
                 scale: 1.05,
                 cursor: 'pointer',
@@ -65,12 +68,26 @@ const Projects = () => {
               <p className="text-gray-700 dark:text-gray-300 mb-4">
                 {project.description}
               </p>
-              <a
-                href={project.link}
-                className="text-blue-500 dark:text-blue-300 hover:underline"
-              >
-                See Project
-              </a>
+              <div className="flex items-center">
+                <a
+                  href={project.link}
+                  className="text-blue-500 dark:text-blue-300 hover:underline"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  <FontAwesomeIcon icon={faDesktop} />
+                </a>
+                <a
+                  href={project.githubLink}
+                  className="text-blue-500 dark:text-blue-300 hover:underline ml-4"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  <FontAwesomeIcon icon={faGithub} size="lg" />
+                </a>
+              </div>
             </motion.div>
           ))}
         </div>

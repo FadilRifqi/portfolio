@@ -9,7 +9,8 @@ export const projects = [
     description:
       'Buye is an e-commerce platform that allows users to buy and sell products. with stack django and reactjs.',
     image: buyee, // Replace with actual image path
-    link: 'https://belajar-django.vercel.app/       ',
+    link: 'https://belajar-django.vercel.app/',
+    githubLink: 'https://github.com/FadilRifqi/jadwal-kelas-frontend',
   },
   {
     title: 'Quotes Generator',
@@ -17,13 +18,15 @@ export const projects = [
       'Quotes Generator is a web application that generates random quotes with stack reactjs.',
     image: quotesGenerator, // Replace with actual image path
     link: 'https://quotes.fadilrifqi.site/',
+    githubLink: 'https://github.com/FadilRifqi/quotes-generator',
   },
   {
     title: 'Quiz Web App',
     description:
       'Quiz Web App is a web application that allows users to take quizzes with stack reactjs.',
     image: quiz, // Replace with actual image path
-    link: 'https://quizfadilrifqi.site/',
+    link: 'https://quiz.fadilrifqi.site/',
+    githubLink: 'https://github.com/FadilRifqi/quiz',
   },
   {
     title: 'Static Desktop Website',
@@ -31,5 +34,6 @@ export const projects = [
       'A clone static website from https://bernerkuhl.com with oinly html, css, and javascript.',
     image: websiteStatic, // Replace with actual image path
     link: 'https://static.fadilrifqi.site/',
+    githubLink: 'https://github.com/FadilRifqi/dicoding-DBSF',
   },
 ];
